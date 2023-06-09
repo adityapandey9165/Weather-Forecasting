@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #3b4d61;
+}
+main {
+  margin: 6%;
+  font-size: 1.11rem;
+  padding: 0.8%;
+  padding-top: 2.1%;
+  padding-bottom: 0;
+  background-color: #ffc13b;
+}
+.row {
+  padding: 3%;
+  padding-top: 0;
+  padding-bottom: 1%;
+}
+
+div th {
+  padding: 0;
+  margin-right: 2px;
+}
+form {
+  margin-top: 6%;
+  width: 56%;
+  height: 2rem;
+  align-items: center;
+  transform: translateX(40%);
+}
+
+h1 {
+  font-family: sans-serif;
+}

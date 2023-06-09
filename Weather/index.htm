@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="home.css" />
+
+    <title>Weather Forecasting</title>
+  </head>
+  <body>
+    <form class="d-flex frm" role="search">
+      <input
+        class="form-control me-2"
+        type="search"
+        id="city"
+        placeholder="Enter a city or country"
+        aria-label="Search"
+      />
+      <button
+        class="btn btn-info"
+        style="
+          color: rgb(0, 0, 0);
+          border-color: black;
+          font-size: 1.1rem;
+          background-color: #e0a96d;
+        "
+        id="sumbit"
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+
+    <main>
+      <h1 id="ert" class="mb-4 text-center">
+        Weather for <span id="cityName"></span>
+      </h1>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div
+            class="card mb-4 rounded-3 shadow-sm"
+            style="background-color: #ffe4b5"
+          >
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal" id="tct">Temprature</h4>
+            </div>
+            <div class="card-body" id="mbdd">
+              <h1 class="ccv">
+                <span id="temp1"> </span> <sup><span>&#8451;</span></sup>
+              </h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>
+                  Temprature is <spam id="temp"></spam>
+                  <sup><span>&#8451;</span></sup>
+                </li>
+                <li>
+                  Min Temprature is <spam id="min_temp"> </spam>
+                  <sup><span>&#8451;</span></sup>
+                </li>
+                <li>
+                  Max Temprature is <spam id="max_temp"></spam>
+                  <sup><span>&#8451;</span></sup>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card mb-4 rounded-3 shadow-sm"
+            style="background-color: #ffe4b5"
+          >
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Humidity</h4>
+            </div>
+            <div class="card-body mbd">
+              <h1><spam id="humidity2"></spam> %</h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li></li>
+                <li>Humidity is <spam id="humidity"></spam> %</li>
+                <li>Cloud PCT is <spam id="cloud_pct"></spam></li>
+                <li>Feels like is <spam id="feels_like"></spam></li>
+                <li>Sunrise Time is <spam id="sunrise"></spam></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card mb-4 rounded-3 shadow-sm"
+            style="background-color: #ffe4b5"
+          >
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Wind</h4>
+            </div>
+            <div class="card-body mbd">
+              <h1><spam id="wind_speed2"></spam> KpH</h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Wind speed is <spam id="wind_speed"></spam> KpH</li>
+                <li>Wind degree is <spam id="wind_degrees"></spam></li>
+
+                <li>Sunset Time is <spam id="sunset"></spam></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weather of other citys
+
+      <h2 class="display-6 text-center mb-4">Weather of other city</h2>
+
+      <div class="table-responsive">
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th></th>
+              <th style="width: 9%">Cloud_pct</th>
+              <th style="width: 9%">Feels_like</th>
+              <th style="width: 9%">Humidity</th>
+              <th style="width: 9%">Max_temp</th>
+              <th style="width: 9%">Min_temp</th>
+              <th style="width: 9%">Sunrise</th>
+              <th style="width: 9%">Sunset</th>
+              <th style="width: 9%">Temp</th>
+              <th style="width: 9%">Wind_degrees</th>
+              <th style="width: 9%">Wind_speed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th id="c1" scope="row" class="text-start">Shangai</th>
+              <td id="v1"></td>
+              <td id="v2"></td>
+              <td id="v3"></td>
+              <td id="v4"></td>
+              <td id="v5"></td>
+              <td id="v6"></td>
+              <td id="v7"></td>
+              <td id="v8"></td>
+              <td id="v9"></td>
+              <td id="v10"></td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-start">Boston</th>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>10</td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th scope="row" class="text-start">Hyderabad</th>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-start">Bhopal</th>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-start">Laddakh</th>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>10</td>
+            </tr>
+          </tbody>
+        </table>
+      </div> -->
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
