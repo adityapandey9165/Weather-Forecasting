@@ -16,8 +16,8 @@ A weather app that pulls from the Rapid API to allow users to search for and vie
 
 ## Build with
 
-HTML
-CSS
-JAVASCRIPT
-RAPID API
+HTML,
+CSS,
+JAVASCRIPT,
+RAPID API and 
 BOOTSTRAP
